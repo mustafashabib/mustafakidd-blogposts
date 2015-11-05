@@ -1,0 +1,26 @@
+---
+layout: post
+title: Robot Blocks
+date: 2014-06-13 14:41:14.000000000 -04:00
+type: post
+published: true
+status: publish
+categories:
+- Techy
+tags: []
+meta:
+  _edit_last: '1'
+author:
+  login: mustafakidd
+  email: mustafashabib@gmail.com
+  display_name: Mustafa Shabib
+  first_name: Mustafa
+  last_name: Shabib
+---
+<p>What I love most about software is that it is excellent at doing exactly what you tell it to do, never veering from your instructions, never complaining, and doing it extremely quickly. These are not only excellent characteristics we can leverage for our own efficiency gains, but coincidentally things that humans like me are typically awful at. Finding a tool that does things you are bad at and does them well, quickly, and cheaply is so rare that we'd be remiss not to take full advantage of these quirks in its nature. In an attempt to leverage these powers for good, I'm sharing an in-progress project I've been working on called <a title="Robot Blocks on Github" href="https://github.com/mustafashabib/robotblocks">Robot Blocks</a>.</p>
+<p>For my own uses, Robot Blocks has been helpful to quickly build up a project with a backend data store in my preferred framework, .NET. Inverting the pattern we used at <a href="http://www.wearemammoth.com">WAM</a>, I took an <a title="Entity Framework, Code First" href="http://msdn.microsoft.com/en-us/data/jj193542.aspx">Entity Framework code first</a> approach that allowed me to organically design/build my data model and not worry too much about the backend details. I'd like to eventually make it a part of my build toolchain to update my backend as I develop. If I were building client facing apps, I'd longer term want to generate a simple front end admin tool for the database, and some simple tools to query/dump the data for BI purposes.</p>
+<p><!--more--></p>
+<p>My friend <a title="Ka Wai Cheung" href="http://www.lifeimitatescode.com/">Ka Wai Cheung</a> and I have had great success over the years in leveraging <a title="Code Generation" href="https://wearemammoth.com/2009/05/when-you-follow-good-rules-code">code generation</a> and, for me, was a big reason for some of our successes at <a title="We Are Mammoth" href="http://www.wearemammoth.com">We Are Mammoth</a> in the early years. Code generation allowed us to deliver high quality and custom work for our customers at costs far below those of our competitors and also standardized a lot of our internal processes since all projects took on similar shapes and appearances, making developers more fungible as there was very little ramp up time to become effective at working with our many different project codebases. Of course, code generation and convention took a huge step into the limelight with projects like <a title="RoR" href="http://rubyonrails.org/">Rails</a> which abstracted away a lot of the underlying boilerplate code and let people get to work and get things done, so we're by no means alone in our appreciation for this kind of an approach to software development, and especially web development.</p>
+<p>I additionally like the fact that code is becoming much more of a lego block building game than it once was, with rich and powerful frameworks allowing us to quickly assemble more and more complex pieces. Robot Blocks' name is a nod to the new reality of writing software based on <a title="DNA" href="http://upload.wikimedia.org/wikipedia/commons/4/4c/DNA_Structure%2BKey%2BLabelled.pn_NoBB.png">previously successful examples you may have heard of </a>where simple components collaborate to form new and advanced wholes...</p>
+<p>It's still a work in progress, but does a relatively good job generating an initial data schema using SQL, for now, though there's some work to be done in updating databases after the initial generation.</p>
+<p>Please feel free to share and contribute to the project. Though EF and similar projects exist in the same niche, something more lightweight and, to me, simpler, seems worthwhile.</p>

@@ -1,0 +1,37 @@
+---
+layout: post
+title: COMMIT CRIMES BADLY
+date: 2013-04-23 09:30:15.000000000 -04:00
+type: post
+published: true
+status: publish
+categories:
+- Thoughts
+tags: []
+meta:
+  _edit_last: '1'
+author:
+  login: mustafakidd
+  email: mustafashabib@gmail.com
+  display_name: Mustafa Shabib
+  first_name: Mustafa
+  last_name: Shabib
+---
+<p>If you've spent any time at all developing software, you've - willingly or unwillingly - had to come to terms with the fact that a huge part of your job isn't writing new code, but is instead about playing detective and recreating causes to problems so that you could fix them.<br />
+<!--more--><br />
+Here, your job as detective can be made much easier when the coder version of you - the criminal in this metaphor - has left behind <strong>obvious and </strong><strong>useful clues </strong>as to what's going on within your system. Future you, your current and future coworkers, and people you'll never meet will some day thank you. When you have to go through systems trying to solve obscure issues that have brought your app to its knees - and the boss, standing over your slumped in distress shoulders with a scowl on his face, to your desk - these clues will be like water on the parched lips of a man lost in the desert. </p>
+<p>One of the first places you'll look to when faced with an unknown problem will be whatever logs you've thought to generate as the system is running. These logs contain a great deal of evidence, clues, eye witness accounts, and direction that can help you piece together exactly what's going on. They can also become a source of frustration if they were created carelessly or if they generate so much information that they're basically useless. Just as with any other tool, it's important that you understand how to best use their unique features to your advantage to help you make your life easier.</p>
+<p>Just like comments, logs help you understand what's going on, and just as comments such as:</p>
+<p><code> //adding one to the variable x<br />
+x += 1;<br />
+</code></p>
+<p>Tell you basically...nothing, a log like:</p>
+<p><code> 2013-04-18--[3] - ERROR - Something bad happened with the input.<br />
+</code></p>
+<p>Is equally useless. While grep will be your savior in pinpointing errors, keeping your logs clear will allow you to find these errors more quickly and generally keep your system more maintainable, just as writing clean code keeps your code base clearer.</p>
+<p>Generally, the following guidelines work well for me, but as always it's important that you figure out what will work for you and your team:</p>
+<p><strong>DEBUG</strong>: Here I log everything that I'll want to know as I'm developing and debugging my code. This is stuff that's helpful when I'm first building my system and helps me get a very detailed idea of what's going on, but stuff that I wouldn't miss when it comes time to solve production problems.</p>
+<p><strong>INFO</strong>: General business logic messages, progress, etc.</p>
+<p><strong>WARN</strong>: Recoverable issues, typically things like missing configuration values where the code reverts to some sane default value.</p>
+<p><strong>ERROR</strong>: Serious and unrecoverable issues. These will be what you grep through your logs looking for and logging non errors at this level will make your life Very Difficult when trouble comes knocking. Your database is down, your caching server isn't responding, etc.</p>
+<p>Again, these are just my general guidelines - the point is that I want to log as much information as I'll need when something bad happens - and nothing more. There are a lot more<a title="Great logging tips from Julius Davies" href="http://juliusdavies.ca/logging.html"> detailed and great logging tips</a> out there, if you want do a <a title="DON’T JOIN A CARGO CULT" href="http://www.mustafakidd.com/?p=391">deeper dive</a>.</p>
